@@ -1,0 +1,7 @@
+config { type: "assertion" }
+
+SELECT
+  count(*) as row_count
+FROM
+  ${ref("staging_vbak")}
+having count(*) = 0

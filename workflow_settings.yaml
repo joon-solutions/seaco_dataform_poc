@@ -1,0 +1,5 @@
+defaultProject: analytics-prod-438007
+defaultLocation: US
+defaultDataset: dataform_analytics_staging
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0

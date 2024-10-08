@@ -1,0 +1,7 @@
+config { type: "assertion" }
+
+SELECT
+  count(*)
+FROM
+  ${ref("staging_vbkd")}
+having count(*) = 0

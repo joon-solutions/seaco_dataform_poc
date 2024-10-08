@@ -1,0 +1,7 @@
+config {
+  type: "table"
+}
+
+select *
+from ${ref("vbkd")}
+

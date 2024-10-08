@@ -1,0 +1,7 @@
+config { type: "assertion" }
+
+SELECT
+  count(*)
+FROM
+  ${ref("staging_vbup")}
+having count(*) = 0
