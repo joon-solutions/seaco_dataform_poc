@@ -1,7 +1,0 @@
-config { type: "assertion" }
-
-SELECT
-  count(*) as row_count
-FROM
-  ${ref("staging_vbap")}
-having count(*) = 0
