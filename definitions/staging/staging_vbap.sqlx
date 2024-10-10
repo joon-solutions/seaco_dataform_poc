@@ -1,0 +1,6 @@
+config {
+  type: "table"
+}
+
+select *
+from ${ref("vbap")}

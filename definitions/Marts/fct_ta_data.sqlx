@@ -1,0 +1,11 @@
+config {
+  type: "table",
+
+  schema: "dataform_analytics_mart"
+}
+
+select *
+from ${ref("staging_vbap")} as ta_vbap
+left join ${ref("staging_vbkd")} as ta_vbkd on ta_vbkd.vbeln = ta_vbap.vbeln and ta_vbkd.posnr = ta_vbap.posnr
+left join ${ref("staging_vbup")} as ta_vbup on ta_vbup.vbeln = ta_vbap.vbeln and ta_vbup.posnr = ta_vbap.posnr
+left join ${ref("staging_vbak")} as ta_vbak on ta_vbak.vbeln = ta_vbap.vbeln
