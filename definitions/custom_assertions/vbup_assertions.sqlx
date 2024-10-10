@@ -1,0 +1,10 @@
+config {
+    type: "assertion"
+}
+
+SELECT
+  COUNT(*) AS row_count
+FROM
+  ${ref("staging_vbup")}
+HAVING
+  COUNT(*) = 0
